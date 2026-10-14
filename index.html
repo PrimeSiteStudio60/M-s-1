@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
 <meta name="theme-color" content="#050914">
 <title>O olhar que silenciou o caos — Capítulo 01</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,10 +25,10 @@
 
 <header class="bar">
   <button id="back" class="icon" aria-label="Voltar à cena anterior" hidden>‹</button>
-  <span class="chap" id="chap" hidden><svg class="sym"><use href="#sym1"/></svg> Capítulo 01</span>
+  <span class="chap" id="chap" hidden><svg class="sym"><use href="#sym1"/></svg><span class="t">Capítulo 01</span></span>
   <span class="grow"></span>
   <button id="memBtn" class="ghost" hidden>Lembranças</button>
-  <button id="fxBtn" class="ghost" aria-pressed="true" title="Pausar ou ativar os efeitos de movimento">Efeitos: ligados</button>
+  <button id="fxBtn" class="ghost" aria-pressed="true" aria-label="Efeitos de movimento: ligados" title="Pausar ou ativar os efeitos de movimento"><span class="dot" aria-hidden="true"></span>Efeitos</button>
 </header>
 
 <main>
@@ -41,7 +41,7 @@
       <form id="gate" class="late2" autocomplete="off" novalidate>
         <label for="key" class="small">Digite a palavra-chave descoberta pelas pistas.</label>
         <div class="row">
-          <input id="key" type="text" inputmode="text" autocapitalize="none" autocorrect="off" spellcheck="false" aria-describedby="msg" placeholder="palavra-chave">
+          <input id="key" name="palavra" type="text" inputmode="text" enterkeyhint="go" autocapitalize="none" autocorrect="off" spellcheck="false" aria-describedby="msg" placeholder="palavra-chave">
           <button class="btn" type="submit">Abrir</button>
         </div>
         <p id="msg" class="msg" role="status" aria-live="polite"></p>
@@ -79,8 +79,8 @@
   <section class="scene" id="s4" aria-label="O segredo do olhar" hidden>
     <div class="wrap center">
       <svg class="cons" viewBox="0 0 200 90" aria-hidden="true">
-        <polyline points="20,60 55,30 95,48 130,20 180,42" pathLength="1"/>
-        <polyline points="95,48 110,78 150,70" pathLength="1"/>
+        <path d="M20 60L55 30L95 48L130 20L180 42"/>
+        <path d="M95 48L110 78L150 70"/>
         <g><circle cx="20" cy="60" r="2.4"/><circle cx="55" cy="30" r="2.4"/><circle cx="95" cy="48" r="3.4"/><circle cx="130" cy="20" r="2.4"/><circle cx="180" cy="42" r="2.4"/><circle cx="110" cy="78" r="2"/><circle cx="150" cy="70" r="2"/></g>
       </svg>
       <div class="lines" id="l4" tabindex="-1"></div>
